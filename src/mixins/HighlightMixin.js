@@ -31,7 +31,7 @@ export const HighlightMixin = types
         return;
       }
 
-      const range = self.getRangeToHighlight();
+      const range = self._getRange();
       const root = self._getRootNode();
 
       // Avoid rendering before view is ready
