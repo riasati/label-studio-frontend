@@ -69,7 +69,7 @@ export const HighlightMixin = types
     updateHighlightedText() {
       if (!self.text) {
         // Concatenating of spans' innerText is up to 10 times faster, but loses "\n"
-        const range = self.getRangeToHighlight();
+        const range = self._getRange();
         const root = self._getRootNode();
 
         if (!range || !root) {
